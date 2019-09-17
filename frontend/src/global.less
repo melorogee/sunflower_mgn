@@ -1,0 +1,77 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// 清除浮动
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+}
+
+:global {
+  .ant-menu-root {
+    height: ~'calc(100vh - 144px)';
+    overflow-x: hidden;
+    border-right: none;
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  // .ant-layout-footer,
+  // .ant-layout {
+  //     background: #fff !important;
+  // }
+  .ant-table-wrapper .ant-table .ant-table-content .ant-table-body {
+    margin: 0;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
