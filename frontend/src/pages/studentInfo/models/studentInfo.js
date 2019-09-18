@@ -21,9 +21,11 @@ export default {
 
   reducers: {
     getStudentListSuccess(state, { payload }) {
+      console.log(payload);
       return {
         ...state,
         // studentList
+        studentList: payload,
       };
     },
   },

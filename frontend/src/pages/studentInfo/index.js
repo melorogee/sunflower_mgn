@@ -29,6 +29,11 @@ class studentInfo extends PureComponent {
       // this.setState({
       //     loading: false
       // })
+      const { studentInfo } = this.props;
+      const { studentList } = studentInfo;
+      this.setState({
+        studentList,
+      });
     });
   }
   render() {
@@ -37,73 +42,76 @@ class studentInfo extends PureComponent {
     //定义表格表头
     const studentColumns = [
       {
-        title: '学生id',
-        dataIndex: 'student_id',
-        key: 'student_id',
+        title: 'id',
+        dataIndex: 'student_Id',
+        width: 50,
+        key: 'student_Id',
       },
       {
-        title: '学生姓名',
+        title: '姓名',
         dataIndex: 'student_name',
+        width: 120,
         key: 'student_name',
       },
       {
         title: '小名',
         dataIndex: 'student_nick_name',
+        width: 120,
         key: 'student_nick_name',
       },
       {
         title: '班级',
         dataIndex: 'school_class',
+        width: 120,
         key: 'school_class',
       },
       {
         title: '生日',
         dataIndex: 'birth_day',
+        width: 120,
         key: 'birth_day',
       },
       {
         title: '年龄',
         dataIndex: 'age_now',
+        width: 120,
         key: 'age_now',
       },
       {
-        title: '家长1姓名',
+        title: '家长',
         dataIndex: 'parent_name_1',
+        width: 120,
         key: 'parent_name_1',
       },
       {
-        title: '家长1电话',
+        title: '家长电话',
         dataIndex: 'parent_phone_1',
+        width: 200,
         key: 'parent_phone_1',
       },
-      {
-        title: '家长2姓名',
-        dataIndex: 'parent_name_2',
-        key: 'parent_name_2',
-      },
-      {
-        title: '家长2电话',
-        dataIndex: 'parent_phone_2',
-        key: 'parent_phone_2',
-      },
+
       {
         title: '学生性格',
         dataIndex: 'student_desc',
+        width: 120,
         key: 'student_desc',
       },
       {
         title: '描述',
         dataIndex: 'desc',
+        width: 200,
         key: 'desc',
       },
       {
         title: '报名渠道',
         dataIndex: 'channel',
+        width: 120,
         key: 'channel',
       },
       {
         title: '报名时间',
         dataIndex: 'join_time',
+        width: 120,
         key: 'join_time',
       },
     ];
@@ -116,6 +124,7 @@ class studentInfo extends PureComponent {
             columns={studentColumns}
             dataSource={studentList}
             pagination={false}
+            scroll={{ y: 1200 }}
           />
         </Card>
       </div>
