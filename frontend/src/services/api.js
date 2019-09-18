@@ -24,3 +24,11 @@ export async function getStudentList(params) {
     body: params,
   });
 }
+
+//获取学生课时列表
+export async function getStudentCourse(params) {
+  return request(baseApi + '/api/student/getStudentCourse', {
+    method: 'GET',
+    // body: params,
+  });
+}

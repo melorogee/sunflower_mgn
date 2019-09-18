@@ -17,6 +17,12 @@ export default [
         component: './studentInfo/index',
       },
       {
+        path: '/period-manage',
+        name: 'periodManage',
+        icon: 'form',
+        component: './periodManage/index',
+      },
+      {
         component: '404',
       },
     ],
