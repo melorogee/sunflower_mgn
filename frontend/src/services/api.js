@@ -32,3 +32,11 @@ export async function getStudentCourse(params) {
     // body: params,
   });
 }
+
+//加减课时
+export async function addClass(params) {
+  return request(baseApi + '/api/student/addClass', {
+    method: 'POST',
+    body: params,
+  });
+}
