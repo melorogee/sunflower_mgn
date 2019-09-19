@@ -10,17 +10,17 @@ export default {
   },
 
   effects: {
-    *getCourseList({ payload }, { call, put }) {
+    *getStudentCourse({ payload }, { call, put }) {
       const response = yield call(getStudentCourse, payload);
       yield put({
-        type: 'getCourseListSuccess',
+        type: 'getStudentCourseSuccess',
         payload: response,
       });
     },
   },
 
   reducers: {
-    getCourseList(state, { payload }) {
+    getStudentCourseSuccess(state, { payload }) {
       console.log(payload);
       return {
         ...state,
