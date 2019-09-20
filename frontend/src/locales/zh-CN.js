@@ -106,6 +106,8 @@ export default {
   //   新增
   'menu.studentInfo': '学生信息',
   'menu.periodManage': '课时管理',
+  'menu.crmt': '收支管理',
+
 
   'app.login.message-invalid-credentials': '账户或密码错误（admin/ant.design）',
   'app.login.message-invalid-verification-code': '验证码错误',

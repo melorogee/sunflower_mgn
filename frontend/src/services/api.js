@@ -29,13 +29,33 @@ export async function getStudentList(params) {
 export async function getStudentCourse(params) {
   return request(baseApi + '/api/student/getStudentCourse', {
     method: 'GET',
-    // body: params,
   });
 }
 
 //加减课时
 export async function addClass(params) {
   return request(baseApi + '/api/student/addClass', {
+    method: 'POST',
+    body: params,
+  });
+}
+
+//收支管理
+export async function crmtList(params) {
+  console.log(params);
+  return request(baseApi + '/api/student/crmtList?type='+params.type+'&date='+params.date, {
+    method: 'GET',
+  });
+}
+//收入明细和支出明细
+export async function crmtDetail(params) {
+  return request(baseApi + '/api/student/crmtDetail?date='+params.date, {
+    method: 'GET',
+  });
+}
+//新增明细
+export async function addDetail(params) {
+  return request(baseApi + '/api/student/addDetail', {
     method: 'POST',
     body: params,
   });

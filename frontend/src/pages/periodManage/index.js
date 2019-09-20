@@ -15,143 +15,143 @@ class studentCourseInfo extends PureComponent {
     //初始化页面数据
     this.state = {
       courseList: [
-        // {
-        //   courseId: 1,
-        //   courseName: "周五晚六点45（美术）",
-        //   data:[
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     },
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     },
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     }
-        //   ]
-        // },
-        // {
-        //   courseId: 1,
-        //   courseName: "周五晚六点45（美术）",
-        //   data:[
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     },
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     }
-        //   ]
-        // },
-        // {
-        //   courseId: 1,
-        //   courseName: "周五晚六点45（美术）",
-        //   data:[
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     }
-        //   ]
-        // },
-        // {
-        //   courseId: 1,
-        //   courseName: "周五晚六点45（美术）",
-        //   data:[
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     },
-        //     {
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     },{
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     },{
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     },{
-        //       left_class: 28,
-        //       studentId: 3,
-        //       student_name: "闫芷汀"
-        //     },
-        //     {
-        //       left_class: 0,
-        //       studentId: 4,
-        //       student_name: "葛允诺"
-        //     }
-        //   ]
-        // }
+        {
+          courseId: 1,
+          courseName: "周五晚六点45（美术）",
+          data:[
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            },
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            },
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            }
+          ]
+        },
+        {
+          courseId: 1,
+          courseName: "周五晚六点45（美术）",
+          data:[
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            },
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            }
+          ]
+        },
+        {
+          courseId: 1,
+          courseName: "周五晚六点45（美术）",
+          data:[
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            }
+          ]
+        },
+        {
+          courseId: 1,
+          courseName: "周五晚六点45（美术）",
+          data:[
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            },
+            {
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            },{
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            },{
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            },{
+              left_class: 28,
+              studentId: 3,
+              student_name: "闫芷汀"
+            },
+            {
+              left_class: 0,
+              studentId: 4,
+              student_name: "葛允诺"
+            }
+          ]
+        }
       ],
     };
   }
 
   componentWillMount() {
-    // this.getCourseList();
+    this.getCourseList();
   }
 
   getCourseList() {

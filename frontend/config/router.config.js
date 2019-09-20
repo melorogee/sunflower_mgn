@@ -13,14 +13,20 @@ export default [
       {
         path: '/student-info',
         name: 'studentInfo',
-        icon: 'form',
+        icon: 'team',
         component: './studentInfo/index',
       },
       {
         path: '/period-manage',
         name: 'periodManage',
-        icon: 'form',
+        icon: 'calendar',
         component: './periodManage/index',
+      },
+      {
+        path: '/crmt',
+        name: 'crmt',
+        icon: 'account-book',
+        component: './crmt/index',
       },
       {
         component: '404',
