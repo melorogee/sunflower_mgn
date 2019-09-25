@@ -40,6 +40,14 @@ export async function addClass(params) {
   });
 }
 
+
+//查询学生上课详情
+export async function getDetailList(params) {
+  return request(baseApi + '/api/student/getStudentCourseDetailList', {
+    method: 'POST',
+    body: params,
+  });
+}
 //收支管理
 export async function crmtList(params) {
   console.log(params);
@@ -60,3 +68,41 @@ export async function addDetail(params) {
     body: params,
   });
 }
+
+//加减课时
+export async function addStudent(params) {
+  return request(baseApi + '/api/student/addStudent', {
+    method: 'POST',
+    body: params,
+  });
+}
+
+//获取班级信息 轻量级
+export async function getClassListLite(params) {
+  return request(baseApi + '/api/student/getClassListLite', {
+    method: 'GET',
+  });
+}
+
+//获取班级信息 轻量级
+export async function getStudentListLite(params) {
+  return request(baseApi + '/api/student/getStudentListLite', {
+    method: 'GET',
+  });
+}
+
+
+//排课
+export async function addStudentClass(params) {
+  return request(baseApi + '/api/student/addStudentClass', {
+    method: 'POST',
+    body: params,
+  });
+}
+
+
+
+
+
+
+

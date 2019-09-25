@@ -1,4 +1,4 @@
-import { getStudentCourse, addClass } from '@/services/api';
+import { getStudentCourse, addClass ,getDetailList,getClassListLite,getStudentListLite,addStudentClass} from '@/services/api';
 import { setAuthority } from '@/utils/authority';
 import { reloadAuthorized } from '@/utils/Authorized';
 
@@ -7,7 +7,9 @@ export default {
 
   state: {
     courseList: [],
-    success:false
+    success:false,
+    classList: [],
+    studentList: []
   },
 
   effects: {
@@ -25,6 +27,41 @@ export default {
         payload: response,
       });
     },
+    *getDetailList({ payload }, { call, put }) {
+      const response = yield call(getDetailList, payload);
+      yield put({
+        type: 'getDetailListSuccess',
+        payload: response,
+      });
+    },
+    
+    *getClassListLite({ payload }, { call, put }) {
+      const response = yield call(getClassListLite, payload);
+      yield put({
+        type: 'getClassListLiteSuccess',
+        payload: response,
+      });
+    },
+
+
+    *getStudentListLite({ payload }, { call, put }) {
+      const response = yield call(getStudentListLite, payload);
+      yield put({
+        type: 'getStudentListLiteSuccess',
+        payload: response,
+      });
+    },
+
+
+    
+    *addStudentClass({ payload }, { call, put }) {
+      const response = yield call(addStudentClass, payload);
+      yield put({
+        type: 'addStudentClassSuccess',
+        payload: response,
+      });
+    },
+
   },
 
   reducers: {
@@ -42,6 +79,57 @@ export default {
     },
     addClassSuccess(state, { payload }) {
       console.log(payload);
+      return {
+        ...state,
+        success: payload.success,
+      };
+    },
+    getDetailListSuccess(state, { payload }) {
+     
+      return {
+        ...state,
+        detailList: payload,
+      };
+    },
+
+    getClassListLiteSuccess(state, { payload }) {
+      
+      const list = []
+    
+      // for(var key in payload){ 
+      //     list.push(<Option value={key}>{payload[key]}</Option>);
+      // }
+      // for(let i=0;i<payload.length;i++){
+      //     list.push(<Option value={payload[i]['id']}>{payload[i]['name']}</Option>);
+      // }
+
+      return {
+        ...state,
+        classList: payload.map(({id,name})=><Option value={id}>{name}</Option>),
+      };
+    },
+
+    getStudentListLiteSuccess(state, { payload }) {
+     
+      const list = []
+    
+      // for(var key in payload){ 
+      //     list.push(<Option value={key}>{payload[key]}</Option>);
+      // }
+
+      // for(let i=0;i<payload.length;i++){
+      //   list.push(<Option value={payload[i]['id']}>{payload[i]['name']}</Option>);
+      //  }
+       
+
+      return {
+        ...state,
+        studentList: payload.map(({id,name})=><Option value={id}>{name}</Option>),
+      };
+    },
+
+
+    addStudentClassSuccess(state, { payload }) {
       return {
         ...state,
         success: payload.success,
